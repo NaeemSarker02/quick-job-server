@@ -17,7 +17,7 @@ const pool = mysql.createPool({
 const connectDB = async () => {
   try {
     const connection = await pool.getConnection();
-    console.log(`✅ MySQL Connected Successfully to ${process.env.DB_HOST}:${process.env.DB_PORT || 3306}`);
+    console.log(` MySQL Connected Successfully to ${process.env.DB_HOST}:${process.env.DB_PORT || 3306}`);
     connection.release();
   } catch (error) {
     console.error("❌ MySQL Connection Failed:", error.message);
